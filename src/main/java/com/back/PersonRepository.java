@@ -4,10 +4,11 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class PersonRepository {
-    private final int version;
+        private final int version;
+        private long i;
 
-    public long count () {
-        System.out.println("PersonRepository(v%d).count()작동".formatted(version));
-        return 3;
-    }
+        public long count() {
+            System.out.println("PersonRepository version : %d".formatted(version));
+            return i++;
+        }
 }
